@@ -1,0 +1,8 @@
+# secrets & generated files — never ship these
+.env
+data.json
+data-backup-*.json
+tmdb.rtf
+*.log
+node_modules/
+.DS_Store

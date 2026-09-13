@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media List! — Know something good to watch? Queue it!</title>
+  <link rel="icon" href="/favicon-16.png" sizes="16x16">
+  <link rel="icon" href="/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-180.png" sizes="180x180">
+  <link rel="apple-touch-icon" href="/favicon-180.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="page">
+
+  <!-- admin: small, quiet, tucked in the corner where it belongs -->
+  <div id="admin-corner">
+    <span id="admin-logged" style="display:none">
+      🔐 admin ✓
+      <button id="logout-btn" class="bevel tiny">log out</button>
+    </span>
+    <span id="admin-login-box">
+      🔐 <input type="password" id="admin-pw" maxlength="60" placeholder="admin pw" autocomplete="new-password">
+      <button id="login-btn" class="bevel tiny">log in</button>
+    </span>
+    <span id="login-status" class="status tiny-status"></span>
+  </div>
+
+  <!-- ============ TOP BANNER ============ -->
+  <div id="top-banner">
+    <center>
+      <h1 class="rainbow-text top-title">☆ Media List! ☆</h1>
+      <marquee behavior="scroll" scrollamount="4" class="marquee">
+        ★★★ KNOW SOMETHING GOOD TO WATCH? QUEUE IT! ★★★ &nbsp; MOVIES • TV • ANIME &nbsp; ★★★
+        POSTER ART POWERED BY TMDB &nbsp; ★★★ BEST VIEWED AT 800x600 IN NETSCAPE NAVIGATOR ★★★
+      </marquee>
+    </center>
+  </div>
+
+  <!-- ============ THE THREE COLUMNS ============ -->
+  <div id="columns">
+
+    <section id="col-queue" class="col">
+      <div class="section-head queue-head side-head"><span class="blink">⚡</span> THE QUEUE <span class="blink">⚡</span></div>
+      <div class="side-sub">things u told the owner to watch</div>
+      <div id="queue-list" class="side-list"><div class="empty-note">LOADING...</div></div>
+    </section>
+
+    <section id="col-main" class="col">
+      <center>
+        <div class="section-head"><span class="blink">🔍</span> SEARCH THE INTERNET (OF MOVIES) <span class="blink">🔍</span></div>
+        <table class="search-table" width="100%">
+          <tr>
+            <td class="form-cell">WHAT?:</td>
+            <td class="form-cell grow"><input type="text" id="q" maxlength="100" placeholder="e.g. cowboy bebop" autocomplete="off" autofocus></td>
+            <td class="form-cell"><button id="search-btn" class="bevel">SEARCH!!</button></td>
+          </tr>
+          <tr>
+            <td class="form-cell">U R:</td>
+            <td class="form-cell grow"><input type="text" id="who" maxlength="40" placeholder="who r u? (so u get credit)" autocomplete="off"></td>
+          </tr>
+        </table>
+        <div class="search-hint">type to live-filter the lists — press <b>SEARCH!!</b> or <b>ENTER</b> for the real thing; <b>ADD!!</b> asks what u love about it</div>
+
+        <!-- the visitor counter: demoted to a humble spot between search & results -->
+        <div id="hits-box">
+          <span class="hits-label">u are visitor #</span>
+          <span id="hits" class="hits-counter">......</span>
+          <span class="hits-label">and counting</span>
+        </div>
+
+        <div id="search-status" class="status"></div>
+        <div id="results"></div>
+      </center>
+    </section>
+
+    <section id="col-watched" class="col">
+      <div class="section-head watched-head side-head">✅ THE LIST ✅</div>
+      <div class="side-sub">officially watched &amp; conquered</div>
+      <div id="watched-list" class="side-list"><div class="empty-note">LOADING...</div></div>
+    </section>
+
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="site-footer">
+    <div class="footer-line">© Media List — the name is yours to change (see How2Build-MediaList.md §1.5)</div>
+    <div id="style-picker" class="footer-line">
+      Pick a style:
+      <button class="bevel tiny style-btn" data-style="geocities">retro</button>
+      <button class="bevel tiny style-btn" data-style="angelfire">modern</button>
+    </div>
+    <div class="footer-line small">deployed: <span id="deployed">?</span></div>
+  </footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>
