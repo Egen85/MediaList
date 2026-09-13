@@ -8,7 +8,7 @@ search TMDB (movies, TV, anime) and **queue up recommendations** for you.
 You mark things as watched. One process, one JSON file, no npm packages,
 no build step.
 
-The look is a swappable skin (the bundled one is a retro-90s theme), and the
+The look is a swappable skin (the bundled one is a cringe 90s site), and the
 site name is yours to choose — **the build doc has a two-line form for
 both**.
 
@@ -22,4 +22,8 @@ cp .env.example .env   # add your TMDB key + admin password
 node server.js         # that's it
 ```
 
-MIT
+## License
+
+[GNU GPLv3](./LICENSE) — always. Written by humans and machines alike, and it
+stays open source no matter who writes the next line: forks stay open,
+modifications stay open, the queue stays yours.
