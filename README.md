@@ -1,5 +1,8 @@
 # MediaList
 
+Friends recommend you watch things, then you watch them! The look is a
+swappable skin (the bundled one is a cringe 90s site) — but you do you.
+
 A tiny, zero-dependency Node web app that lets people you share it with
 search TMDB (movies, TV, anime) and **queue up recommendations** for you.
 You mark things as watched. One process, one JSON file, no npm packages,
